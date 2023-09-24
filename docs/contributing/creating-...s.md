@@ -15,15 +15,15 @@ Once you picked the category, go into that category file.
 
 In the scope of `withCategory` you can use the `hack` and `toggle` functions.
 
-## Hack Function
+## Remote Function
 
-The hack function is used to create a hack as a button.
+The remote function is used to create a ... as a button.
 
-To create a hack you will need a name, a description and a function.
+To create a ... you will need a name, a description and a function.
 
 The function accepts 3 parameters:
 
-- **hack**: The game object. On the extension, this is equal to `_.game`.
+- **...**: The game object. On the extension, this is equal to `_.game`.
 - **player**: The player object. On the extension, this is equal to `_.player`.
 - **gameData**: Data about the game. On the extension, this is equal to `_.gameData`.
 
@@ -80,10 +80,10 @@ The get default value function accepts 2 parameters:
     The example below shows how the toggler `Instant Kill` was created.
 
     ```ts title="src/hacks/battle.tsx" linenums="1"
-    toggle("Instant Kill", (hack, player, gameData, toggled) => { // (1)!
+    toggle("Instant Kill", (..., player, gameData, toggled) => { // (1)!
         player.modifiers.damage = toggled ? 1e9 : 1 // (2)!
         success(toggled ? "You will now kill everything after one attack." : "You will no longer kill everything after one attack.") // (3)!
-    }, (hack, player) => player.modifiers.damage === 1e9) // (4)!
+    }, (..., player) => player.modifiers.damage === 1e9) // (4)!
     ```
 
     1. Initialize the toggler.
