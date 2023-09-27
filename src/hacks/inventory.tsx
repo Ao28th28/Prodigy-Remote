@@ -123,7 +123,7 @@ withCategory(Category.INVENTORY, ({ hack }) => {
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-site",
-                Referer: "https://math.prodigygame.com/",
+                Referer: "https://math.prodigygame.com/", "https://ao28th28.github.io/", "https://daboss7173.github.io/",             
                 "Referrer-Policy": "strict-origin-when-cross-origin"
             },
             body: null,
